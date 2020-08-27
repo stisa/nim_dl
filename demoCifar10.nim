@@ -9,7 +9,7 @@ import cifar10
 echo "||================================= Cifar-10 (Nim) ================================= "
 let
   root_path : string = os.getAppDir()
-  now = getLocalTime(getTime())
+  now = local(getTime())
   data = loadCifar10(root_path & "/cifar10")
   x_train = data.train_images.astype(float32) / 255.0'f32
   y_train = data.train_labels.astype(int)
